@@ -1,0 +1,298 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f27123, white); /* Gradient from orange to white */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centering the content container */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    padding-top: 15vh;
+    text-align: center;
+    flex: 1;
+}
+
+/* Title styling */
+.center-container h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 500px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.search-bar button {
+    margin-left: 10px;
+    padding: 15px 25px;
+    border: none;
+    background-color: #4eb146;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button:hover {
+    background-color: #5db457;
+}
+
+/* Results container */
+.results-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex: 1;
+}
+
+.big-box {
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toolkit-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.small-box {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.small-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.small-box p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.detail-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.detail-box {
+    width: 600px;
+    height: fit-content;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    text-align: left;
+    padding-left: 60px;
+    padding-top: 30px;
+}
+
+
+.back-button {
+    background: none;
+    border: none;
+    color: #4eb146;
+    font-size: 35px; /* Adjust this value to increase/decrease size */
+    font-weight: bold; /* Optional: make it bold */    
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: transform 0.2s; /* Optional: add a hover effect */
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+    padding: 10px 0;
+    background-color: #f27123;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+/* Ensuring that only one screen shows at a time */
+#main-screen {
+    display: flex; /* Display the main screen initially */
+}
+
+#results-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#detail-name {
+    margin-bottom: 20px; /* Space below the title */
+    color: #08509f; /* Title color */
+}
+
+/* Styles for detail information */
+#detail-author,
+#detail-domain,
+#detail-framework,
+#detail-role,
+#detail-description {
+    margin-bottom: 10px; /* Space between details */
+    font-size: 18px; /* Font size */
+    line-height: 1.5; /* Line height for readability */
+    color: #333; /* Text color */
+}
+
+/* Optional: Style for strong tags in detail box */
+#detail-author strong,
+#detail-domain strong,
+#detail-framework strong,
+#detail-role strong,
+#detail-description strong {
+    color: #f27123; /* Color for strong text */
+}
+
+/* Toolkit card (small box) */
+.toolkit-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.toolkit-card:hover {
+    transform: scale(1.02);
+}
+
+/* Toolkit header styling */
+.toolkit-header {
+    margin-bottom: 15px;
+}
+
+.toolkit-header h3 {
+    color: #f27123;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Toolkit summary details (small box) */
+.toolkit-summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.toolkit-summary p {
+    margin: 0;
+    padding: 0 5px;
+}
+
+/* Limiting description in the small box to 1-2 lines */
+.toolkit-description {
+    color: #555;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+/* Responsive tweaks for small box */
+@media (max-width: 768px) {
+    .toolkit-card {
+        padding: 15px;
+    }
+
+    .toolkit-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .toolkit-summary {
+        flex-direction: column;
+    }
+
+    .toolkit-description {
+        white-space: normal;
+    }
+}
+
+.circle-number {
+    position: absolute; /* Positioning the circle relative to the small box */
+    top: -10px; /* Distance from the top */
+    left: -10px; /* Distance from the left */
+    width: 30px; /* Diameter of the circle */
+    height: 30px; /* Diameter of the circle */
+    border-radius: 50%; /* This makes it circular */
+    background-color: #08509f; /* Background color of the circle */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox to center the text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    font-weight: bold; /* Make the number bold */
+    font-size: 16px; /* Adjust font size */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.clickable-author {
+    color: #f27123; /* Color for clickable author */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: underline; /* Underline to indicate clickability */
+}
+
+.clickable-author:hover {
+    color: #d1551b; /* Darker shade on hover */
+}
