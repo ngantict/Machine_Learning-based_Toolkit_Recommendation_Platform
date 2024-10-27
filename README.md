@@ -26,5 +26,5 @@ Please feel free to take the data file for your own use if you need it. To get t
 
 For more details, please refer to the attached thesis. And please contact me if you need more information.
 
-Best regards,
+Best regards, 
 Thien Nga
